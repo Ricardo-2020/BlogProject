@@ -19,11 +19,11 @@ public class BlogPost {
     private String author;
     private String blogEntry;
 
-    // default constructor
+    // default constructor (empty)
     public BlogPost(){
 
     }
-
+    // constructor with arguments
     public BlogPost(String title, String author, String blogEntry){
         this.title = title;
         this.author = author;
