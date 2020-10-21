@@ -1,7 +1,18 @@
 package com.tts.techtalentblog;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class BlogPost {
     
+    // JPA will recognize it as the objects ID and primary key
+    // sets id as the primary key
+    @Id
+    // allows the underlying database to set the value for the field
+    @GeneratedValue(strategy = GenerationType.AUTO)
     // Blog post fields
     private Long id;
     private String title;
