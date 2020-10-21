@@ -1,4 +1,4 @@
-package com.tts.techtalentblog;
+package com.tts.techtalentblog.BlogPost;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
