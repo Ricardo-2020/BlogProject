@@ -31,6 +31,14 @@ public class BlogPost {
     }
 
     // Generate getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    // public void setId(Long id) {
+    //     this.id = id;
+    // }
+
     public String getTitle() {
         return title;
     }
@@ -60,6 +68,8 @@ public class BlogPost {
     public String toString() {
         return "BlogPost [author=" + author + ", blogEntry=" + blogEntry + ", id=" + id + ", title=" + title + "]";
     }
+
+    
     
     
 
