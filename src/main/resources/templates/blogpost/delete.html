@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Style Link -->
+    <div th:replace="fragments/styling :: topStyleLinks" ></div>
+    <!-- end -->
+    <title>New Blog Post Created</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <div th:replace="fragments/navbar :: navbar" ></div>
+    <!-- nav bar end -->
+    
+    <div class="container">
+      <h2>Your Blog Post has been deleted</h2>
+    </div>
+
+    <!-- Showing How to Card will Look like -->
+    <div class="container">
+
+        <div class="container">
+            <a th:href="@{/}">
+                <button class="btn-lg btn-success">Home</button>
+            </a>
+            <!-- <a th:href="@{/blogpost/edit/{id}(id=$blogPost.id)}">
+              <button class="btn-lg btn-primary">Edit Blog</button>
+          </a> -->
+        </div>
+      </div>
+
+
+
+    <!-- Bootstrap Footer Script -->
+    <div th:replace="fragments/styling :: bottomJavascript" ></div>
+    <!-- end -->
+  </body>
+</html>
