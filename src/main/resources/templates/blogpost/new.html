@@ -10,7 +10,10 @@
   </head>
 
   <body>
+    <!-- nav bar -->
     <div th:replace="fragments/navbar :: navbar" ></div>
+    <!-- nav bar end -->
+    
     <div class="container">
 		<h1>Create a New Blog Post</h1>
     <form action="#" th:action="@{/blogposts}" th:object="${blogPost}" method="post">
