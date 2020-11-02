@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Style Link -->
+    <div th:replace="fragments/styling :: topStyleLinks" ></div>
+    <!-- end -->
+    <title>New Blog Post Created</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <div th:replace="fragments/navbar :: navbar" ></div>
+    <!-- nav bar end -->
+    
+    <div class="container">
+		<h2>BlogPosts containing #<span th:text="${tag}"></span></h2>
+		<div class="list-group" th:each="${blog.BlogPostList}">
+  			<div class="list-group-item list-group-item-action">
+    			<p class="mb-1" th:utext="${blog.blogEntry}"></p>
+    		</div>
+		</div>
+	    <div th:if="${#lists.isEmpty(BlogPostList)}">
+ 			<h3>No BlogPostss contain this hashtag</h3>
+		</div>
+	</div>
+
+    <!-- Bootstrap Footer Script -->
+    <div th:replace="fragments/styling :: bottomJavascript" ></div>
+    <!-- end -->
+  </body>
+</html>

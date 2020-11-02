@@ -121,6 +121,14 @@ public class BlogPostController {
 		return "blogpost/edit";
     }
 
+    @GetMapping(value = "/blogpost/{tag}")
+    public String getTweetsByTag(@PathVariable(value="tag") String tag, Model model) {
+        List<BlogPost> blogPosts = BlogService.findAllWithTag(tag);
+        model.addAttribute("tweetList", blogPosts);
+        model.addAttribute("tag", tag);
+        return "taggedBlogs";
+    }
+
     
 
     
